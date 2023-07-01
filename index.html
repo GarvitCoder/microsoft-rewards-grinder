@@ -1,141 +1,49 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
+<html lang="en">
+  <head>
+    <title>Quintessential Sniveling Dog</title>
+    <meta property="og:title" content="Quintessential Sniveling Dog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Knox - Demo</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/demo.css">
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./home.css" rel="stylesheet" />
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
-</head>
-
-<body class="ss-preload">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <div class="home-container">
+        <img alt="image" src="public/oip%20(1)-500h.jpeg" class="home-image" />
+        <span class="home-text">THIS SESSION IS CURRENTLY PAUSED</span>
+        <span class="home-text1">Blackjack Softwares</span>
+      </div>
     </div>
-
-
-    <!-- header 
-    ================================================== -->
-    <header>
-        <div class="row">
-            <div class="column lg-12 text-center">
-
-                <h1>KNOX<span>.</span></h1>
-
-                <p class="lead">
-                Knox is a clean, modern, and elegant free coming soon website template. Its thin line elements, 
-                great use of whitespace, and nice typography give the template a professional, classy design. 
-                It is not just aesthetically pleasing it also has the essential functions you need to maintain 
-                and engage visitors, and collect new leads while working on your website. Knox comes in three style 
-                variants: static, slideshow, and particle background.
-                </p>
-
-            </div>
-        </div>
-    </header> <!-- end header -->
-
-
-    <!-- main content
-    ================================================== -->
-    <main>
-        <div class="row block-lg-one-third block-md-one-half block-tab-whole">
-           
-            <div class="column entry">
-                <div class="entry__thumb">
-                    <a href="index-static.html" title="static background">
-                        <img src="images/demo/knox-static.jpg" srcset="images/demo/knox-static.jpg 1x, images/demo/knox-static@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-                <div class="entry__title">
-                    <h3>Static Background</h3>
-                </div>
-            </div>
-
-            <div class="column entry">
-                <div class="entry__thumb">
-                    <a href="index-slides.html" title="slideshow background">
-                        <img src="images/demo/knox-slides.jpg" srcset="images/demo/knox-slides.jpg 1x, images/demo/knox-slides@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-                <div class="entry__title">
-                    <h3>Slideshow Background</h3>
-                </div>
-            </div>
-
-            <div class="column entry">
-                <div class="entry__thumb">
-                    <a href="index-particles.html" title="particles background">
-                        <img src="images/demo/knox-particles.jpg" srcset="images/demo/knox-particles.jpg 1x, images/demo/knox-particles@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-                <div class="entry__title">
-                    <h3>Particles Background</h3>
-                </div>
-            </div>
-            
-        </div>
-    </main> <!--  end main -->
-
-    <!-- Java Script
-    ================================================== -->
-    <script>
-        
-        (function(html) {
-
-            'use strict';
-
-            html.className = html.className.replace(/\bno-js\b/g, '') + 'js';
-
-            const body = document.querySelector('body');
-            const preloader = document.querySelector('#preloader');
-
-            if (!preloader) return;
-
-            window.addEventListener('load', function() {
-
-                body.classList.remove('ss-preload');
-                body.classList.add('ss-loaded');
-
-                preloader.addEventListener('transitionend', function afterTransition(e) {
-                    if (e.target.matches('#preloader'))  {
-                        body.classList.add('ss-show');
-                        e.target.style.display = 'none';
-                        preloader.removeEventListener(e.type, afterTransition);
-                    }
-                });
-
-            });
-
-        })(document.documentElement);
-    
-    </script>
-
-</body>
-
+  </body>
 </html>
