@@ -1,92 +1,141 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<html class="no-js" lang="en">
+<head>
 
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Knox - Demo</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/demo.css">
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
-<body>
+</head>
 
-<div class="bgimg">
-  <div class="topleft">
-    <p>v2.31 Ultra Max</p>
-  </div>
-  <div class="middle">
-    <h1>THIS SESSION IS CURRENTLY PAUSED</h1>
-    <hr>
-  </div>
-  <div class="bottomleft">
-    <p>Eagles</p>
-  </div>
-</div>
+<body class="ss-preload">
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+
+    <!-- header 
+    ================================================== -->
+    <header>
+        <div class="row">
+            <div class="column lg-12 text-center">
+
+                <h1>KNOX<span>.</span></h1>
+
+                <p class="lead">
+                Knox is a clean, modern, and elegant free coming soon website template. Its thin line elements, 
+                great use of whitespace, and nice typography give the template a professional, classy design. 
+                It is not just aesthetically pleasing it also has the essential functions you need to maintain 
+                and engage visitors, and collect new leads while working on your website. Knox comes in three style 
+                variants: static, slideshow, and particle background.
+                </p>
+
+            </div>
+        </div>
+    </header> <!-- end header -->
+
+
+    <!-- main content
+    ================================================== -->
+    <main>
+        <div class="row block-lg-one-third block-md-one-half block-tab-whole">
+           
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-static.html" title="static background">
+                        <img src="images/demo/knox-static.jpg" srcset="images/demo/knox-static.jpg 1x, images/demo/knox-static@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Static Background</h3>
+                </div>
+            </div>
+
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-slides.html" title="slideshow background">
+                        <img src="images/demo/knox-slides.jpg" srcset="images/demo/knox-slides.jpg 1x, images/demo/knox-slides@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Slideshow Background</h3>
+                </div>
+            </div>
+
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-particles.html" title="particles background">
+                        <img src="images/demo/knox-particles.jpg" srcset="images/demo/knox-particles.jpg 1x, images/demo/knox-particles@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Particles Background</h3>
+                </div>
+            </div>
+            
+        </div>
+    </main> <!--  end main -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script>
+        
+        (function(html) {
+
+            'use strict';
+
+            html.className = html.className.replace(/\bno-js\b/g, '') + 'js';
+
+            const body = document.querySelector('body');
+            const preloader = document.querySelector('#preloader');
+
+            if (!preloader) return;
+
+            window.addEventListener('load', function() {
+
+                body.classList.remove('ss-preload');
+                body.classList.add('ss-loaded');
+
+                preloader.addEventListener('transitionend', function afterTransition(e) {
+                    if (e.target.matches('#preloader'))  {
+                        body.classList.add('ss-show');
+                        e.target.style.display = 'none';
+                        preloader.removeEventListener(e.type, afterTransition);
+                    }
+                });
+
+            });
+
+        })(document.documentElement);
+    
+    </script>
 
 </body>
+
 </html>
